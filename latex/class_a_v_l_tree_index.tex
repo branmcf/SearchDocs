@@ -1,0 +1,200 @@
+\hypertarget{class_a_v_l_tree_index}{}\section{A\+V\+L\+Tree\+Index Class Reference}
+\label{class_a_v_l_tree_index}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+
+
+\hyperlink{avltreeindex_8h}{A\+V\+L\+Tree\+Index.\+h} has A\+V\+L Trees public and private classes in them.  
+
+
+
+
+{\ttfamily \#include $<$avltreeindex.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_v_l_tree_index_aba8dc551ea4963a8082991f52bb19c25}{A\+V\+L\+Tree\+Index} ()
+\begin{DoxyCompactList}\small\item\em T\+E\+S\+T1. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_tree_index_a0954e6e43e3742008bf18e71a8afc319}{insert} (\hyperlink{class_term}{Term} $\ast$)
+\begin{DoxyCompactList}\small\item\em public insert function that calls the private function \end{DoxyCompactList}\item 
+\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$ \hyperlink{class_a_v_l_tree_index_a580c720dab8aa7dd31ca4fc20718cd80}{balance} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em figures out when to rotate child or not \end{DoxyCompactList}\item 
+int \hyperlink{class_a_v_l_tree_index_abb5a43355e33d3af6ab29b3a1fcfd93d}{height} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em returns the height of the tree \end{DoxyCompactList}\item 
+int \hyperlink{class_a_v_l_tree_index_a95127bb897068de9eb3a589d0abfac53}{diff} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em returns the difference in height \end{DoxyCompactList}\item 
+int \hyperlink{class_a_v_l_tree_index_a66e4cf16a8a6a4d7a2d8f833eaf05ec4}{max} (int, int)
+\begin{DoxyCompactList}\small\item\em gets the max height \end{DoxyCompactList}\item 
+\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$ \hyperlink{class_a_v_l_tree_index_a9eb44deb708707f01e819bb7d43ef9e8}{rotate\+Right\+Child} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em rotate right child \end{DoxyCompactList}\item 
+\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$ \hyperlink{class_a_v_l_tree_index_ad57215a76dda89d84d5aa1ad0025fdcb}{rotate\+Left\+Child} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em rotate left child \end{DoxyCompactList}\item 
+\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$ \hyperlink{class_a_v_l_tree_index_a353c476f4b6a48af1ec014e15dd321b5}{double\+Left\+Child} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em rotate left child than rotate right child \end{DoxyCompactList}\item 
+\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$ \hyperlink{class_a_v_l_tree_index_aaeb1558d866649c461b3d3719d1a5fea}{double\+Right\+Child} (\hyperlink{struct_a_v_l___node}{A\+V\+L\+\_\+\+Node} $\ast$\&)
+\begin{DoxyCompactList}\small\item\em rotate right child than rotate left child \end{DoxyCompactList}\item 
+\hyperlink{class_term}{Term} $\ast$ \hyperlink{class_a_v_l_tree_index_abd40888cc3d9b4f6b7cacca9b4d7f327}{find} (string)
+\begin{DoxyCompactList}\small\item\em public find function that is called from the interface and than passes it to private function \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_tree_index_a43269725295571c3cd41075e7dfc1c24}{create\+Persistence} (int, ofstream \&)
+\begin{DoxyCompactList}\small\item\em public call to create persistence than calls the private function \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_tree_index_a5de8f71edf00da8fecbd365df562a18e}{clear\+Tree} ()
+\begin{DoxyCompactList}\small\item\em public call to clear index than calls the private function \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{avltreeindex_8h}{A\+V\+L\+Tree\+Index.\+h} has A\+V\+L Trees public and private classes in them. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_v_l_tree_index_aba8dc551ea4963a8082991f52bb19c25}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{A\+V\+L\+Tree\+Index()}]{\setlength{\rightskip}{0pt plus 5cm}A\+V\+L\+Tree\+Index\+::\+A\+V\+L\+Tree\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_aba8dc551ea4963a8082991f52bb19c25}
+
+
+T\+E\+S\+T1. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_v_l_tree_index_a580c720dab8aa7dd31ca4fc20718cd80}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!balance@{balance}}
+\index{balance@{balance}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{balance(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+V\+L\+\_\+\+Node} $\ast$ A\+V\+L\+Tree\+Index\+::balance (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{temp}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a580c720dab8aa7dd31ca4fc20718cd80}
+
+
+figures out when to rotate child or not 
+
+\hypertarget{class_a_v_l_tree_index_a5de8f71edf00da8fecbd365df562a18e}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!clear\+Tree@{clear\+Tree}}
+\index{clear\+Tree@{clear\+Tree}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{clear\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}void A\+V\+L\+Tree\+Index\+::clear\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a5de8f71edf00da8fecbd365df562a18e}
+
+
+public call to clear index than calls the private function 
+
+\hypertarget{class_a_v_l_tree_index_a43269725295571c3cd41075e7dfc1c24}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!create\+Persistence@{create\+Persistence}}
+\index{create\+Persistence@{create\+Persistence}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{create\+Persistence(int, ofstream \&)}]{\setlength{\rightskip}{0pt plus 5cm}void A\+V\+L\+Tree\+Index\+::create\+Persistence (
+\begin{DoxyParamCaption}
+\item[{int}]{level, }
+\item[{ofstream \&}]{persistence}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a43269725295571c3cd41075e7dfc1c24}
+
+
+public call to create persistence than calls the private function 
+
+\hypertarget{class_a_v_l_tree_index_a95127bb897068de9eb3a589d0abfac53}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!diff@{diff}}
+\index{diff@{diff}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{diff(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}int A\+V\+L\+Tree\+Index\+::diff (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{temp}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a95127bb897068de9eb3a589d0abfac53}
+
+
+returns the difference in height 
+
+\hypertarget{class_a_v_l_tree_index_a353c476f4b6a48af1ec014e15dd321b5}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!double\+Left\+Child@{double\+Left\+Child}}
+\index{double\+Left\+Child@{double\+Left\+Child}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{double\+Left\+Child(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+V\+L\+\_\+\+Node} $\ast$ A\+V\+L\+Tree\+Index\+::double\+Left\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a353c476f4b6a48af1ec014e15dd321b5}
+
+
+rotate left child than rotate right child 
+
+\hypertarget{class_a_v_l_tree_index_aaeb1558d866649c461b3d3719d1a5fea}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!double\+Right\+Child@{double\+Right\+Child}}
+\index{double\+Right\+Child@{double\+Right\+Child}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{double\+Right\+Child(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+V\+L\+\_\+\+Node} $\ast$ A\+V\+L\+Tree\+Index\+::double\+Right\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_aaeb1558d866649c461b3d3719d1a5fea}
+
+
+rotate right child than rotate left child 
+
+\hypertarget{class_a_v_l_tree_index_abd40888cc3d9b4f6b7cacca9b4d7f327}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!find@{find}}
+\index{find@{find}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{find(string)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Term} $\ast$ A\+V\+L\+Tree\+Index\+::find (
+\begin{DoxyParamCaption}
+\item[{string}]{word}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_abd40888cc3d9b4f6b7cacca9b4d7f327}
+
+
+public find function that is called from the interface and than passes it to private function 
+
+\hypertarget{class_a_v_l_tree_index_abb5a43355e33d3af6ab29b3a1fcfd93d}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!height@{height}}
+\index{height@{height}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{height(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}int A\+V\+L\+Tree\+Index\+::height (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{temp}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_abb5a43355e33d3af6ab29b3a1fcfd93d}
+
+
+returns the height of the tree 
+
+\hypertarget{class_a_v_l_tree_index_a0954e6e43e3742008bf18e71a8afc319}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!insert@{insert}}
+\index{insert@{insert}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{insert(\+Term $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void A\+V\+L\+Tree\+Index\+::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Term} $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a0954e6e43e3742008bf18e71a8afc319}
+
+
+public insert function that calls the private function 
+
+\hypertarget{class_a_v_l_tree_index_a66e4cf16a8a6a4d7a2d8f833eaf05ec4}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!max@{max}}
+\index{max@{max}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{max(int, int)}]{\setlength{\rightskip}{0pt plus 5cm}int A\+V\+L\+Tree\+Index\+::max (
+\begin{DoxyParamCaption}
+\item[{int}]{value1, }
+\item[{int}]{value2}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a66e4cf16a8a6a4d7a2d8f833eaf05ec4}
+
+
+gets the max height 
+
+\hypertarget{class_a_v_l_tree_index_ad57215a76dda89d84d5aa1ad0025fdcb}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!rotate\+Left\+Child@{rotate\+Left\+Child}}
+\index{rotate\+Left\+Child@{rotate\+Left\+Child}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{rotate\+Left\+Child(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+V\+L\+\_\+\+Node} $\ast$ A\+V\+L\+Tree\+Index\+::rotate\+Left\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_ad57215a76dda89d84d5aa1ad0025fdcb}
+
+
+rotate left child 
+
+\hypertarget{class_a_v_l_tree_index_a9eb44deb708707f01e819bb7d43ef9e8}{}\index{A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}!rotate\+Right\+Child@{rotate\+Right\+Child}}
+\index{rotate\+Right\+Child@{rotate\+Right\+Child}!A\+V\+L\+Tree\+Index@{A\+V\+L\+Tree\+Index}}
+\subsubsection[{rotate\+Right\+Child(\+A\+V\+L\+\_\+\+Node $\ast$\&)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+V\+L\+\_\+\+Node} $\ast$ A\+V\+L\+Tree\+Index\+::rotate\+Right\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+V\+L\+\_\+\+Node} $\ast$\&}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_a_v_l_tree_index_a9eb44deb708707f01e819bb7d43ef9e8}
+
+
+rotate right child 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{avltreeindex_8h}{avltreeindex.\+h}\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{avltreeindex_8cpp}{avltreeindex.\+cpp}\end{DoxyCompactItemize}

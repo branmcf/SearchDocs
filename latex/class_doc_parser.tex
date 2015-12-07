@@ -1,0 +1,157 @@
+\hypertarget{class_doc_parser}{}\section{Doc\+Parser Class Reference}
+\label{class_doc_parser}\index{Doc\+Parser@{Doc\+Parser}}
+
+
+Handles the text of files, primarily that of Wiki\+Books.\+xml. Uses Rapid\+X\+M\+L libraries. Initiates \hyperlink{class_page_info}{Page\+Info} objects for a file and stores them to the inverted index.  
+
+
+
+
+{\ttfamily \#include $<$docparser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_doc_parser_a637fc4d565eaf2927ee9b88bbe23e3cb}{$\sim$\+Doc\+Parser} ()
+\item 
+\hyperlink{class_doc_parser_a086f00e54fca8038c85c0e235948d75a}{Doc\+Parser} (\hyperlink{class_index_interface}{Index\+Interface} \&the\+Index)
+\begin{DoxyCompactList}\small\item\em Default constructor never called; must take a reference to the inverted file intdex. \end{DoxyCompactList}\item 
+string \hyperlink{class_doc_parser_a1b127af53e8af16f393b64f46c307d3a}{clean\+\_\+term} (string term)
+\begin{DoxyCompactList}\small\item\em Stem the terms then makes all letters lowercase. \end{DoxyCompactList}\item 
+void \hyperlink{class_doc_parser_ad92d1a6da7d413abd27ee18a6ed20a30}{clear} ()
+\begin{DoxyCompactList}\small\item\em Deallocate data members. \end{DoxyCompactList}\item 
+int \hyperlink{class_doc_parser_a7addc81ac337c2688bb9e9d8197db2fc}{index\+\_\+for\+\_\+letter} (char letter)
+\begin{DoxyCompactList}\small\item\em Determine which \hyperlink{class_a_v_l_tree_index}{A\+V\+L\+Tree\+Index} or \hyperlink{class_hash_table_index}{Hash\+Table\+Index} should handle the appearance. Returns 0 if the term is a number, 1 for \textquotesingle{}a\textquotesingle{}, 2 for \textquotesingle{}b\textquotesingle{}, and so forth. \end{DoxyCompactList}\item 
+void \hyperlink{class_doc_parser_a48cd3949baca573b9be0b4ba24b9c79d}{read\+\_\+page} (\hyperlink{classrapidxml_1_1xml__node}{xml\+\_\+node}$<$$>$ $\ast$curr\+Node, bool read\+Text)
+\begin{DoxyCompactList}\small\item\em Makes a new \hyperlink{class_page_info}{Page\+Info} object from a page. Will or will not fetch term appearances from the text after using it as a \hyperlink{class_page_info}{Page\+Info} constructor parameter. \end{DoxyCompactList}\item 
+void \hyperlink{class_doc_parser_af28153ebf0ee2fe97c2942c04c915adc}{read\+\_\+text} (\hyperlink{classrapidxml_1_1xml__node}{xml\+\_\+node}$<$$>$ $\ast$curr\+Node)
+\begin{DoxyCompactList}\small\item\em Get all page appearances from the current page\textquotesingle{}s text. Pass this info to the inverted index. \end{DoxyCompactList}\item 
+void \hyperlink{class_doc_parser_ad7b5809e4efd3e2bae781c1cb491ab29}{init\+\_\+file\+\_\+page\+\_\+infos} (\hyperlink{classrapidxml_1_1xml__node}{xml\+\_\+node}$<$$>$ $\ast$curr\+Node, bool read\+Text)
+\begin{DoxyCompactList}\small\item\em Call read\+\_\+page for each page. \end{DoxyCompactList}\item 
+void \hyperlink{class_doc_parser_a45860ee7fb0b956c4342cd4a815818de}{read\+\_\+file} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Get to the right node (assuming it\textquotesingle{}s the same structure as Wiki\+Books.\+xml, then call init\+\_\+file\+\_\+page\+\_\+infos. \end{DoxyCompactList}\item 
+bool \hyperlink{class_doc_parser_ad30c49de12ed45eaf2594c4718789c3e}{is\+\_\+stop\+\_\+word} (string term)
+\begin{DoxyCompactList}\small\item\em Checks the stop\+Word\+Map; returns true if the passed string is in stop\+Words. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles the text of files, primarily that of Wiki\+Books.\+xml. Uses Rapid\+X\+M\+L libraries. Initiates \hyperlink{class_page_info}{Page\+Info} objects for a file and stores them to the inverted index. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_doc_parser_a637fc4d565eaf2927ee9b88bbe23e3cb}{}\index{Doc\+Parser@{Doc\+Parser}!````~Doc\+Parser@{$\sim$\+Doc\+Parser}}
+\index{````~Doc\+Parser@{$\sim$\+Doc\+Parser}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{$\sim$\+Doc\+Parser()}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Parser\+::$\sim$\+Doc\+Parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a637fc4d565eaf2927ee9b88bbe23e3cb}
+\hypertarget{class_doc_parser_a086f00e54fca8038c85c0e235948d75a}{}\index{Doc\+Parser@{Doc\+Parser}!Doc\+Parser@{Doc\+Parser}}
+\index{Doc\+Parser@{Doc\+Parser}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{Doc\+Parser(\+Index\+Interface \&the\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}Doc\+Parser\+::\+Doc\+Parser (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Interface} \&}]{the\+Index}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a086f00e54fca8038c85c0e235948d75a}
+
+
+Default constructor never called; must take a reference to the inverted file intdex. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_doc_parser_a1b127af53e8af16f393b64f46c307d3a}{}\index{Doc\+Parser@{Doc\+Parser}!clean\+\_\+term@{clean\+\_\+term}}
+\index{clean\+\_\+term@{clean\+\_\+term}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{clean\+\_\+term(string term)}]{\setlength{\rightskip}{0pt plus 5cm}string Doc\+Parser\+::clean\+\_\+term (
+\begin{DoxyParamCaption}
+\item[{string}]{term}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a1b127af53e8af16f393b64f46c307d3a}
+
+
+Stem the terms then makes all letters lowercase. 
+
+\hypertarget{class_doc_parser_ad92d1a6da7d413abd27ee18a6ed20a30}{}\index{Doc\+Parser@{Doc\+Parser}!clear@{clear}}
+\index{clear@{clear}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Parser\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_ad92d1a6da7d413abd27ee18a6ed20a30}
+
+
+Deallocate data members. 
+
+\hypertarget{class_doc_parser_a7addc81ac337c2688bb9e9d8197db2fc}{}\index{Doc\+Parser@{Doc\+Parser}!index\+\_\+for\+\_\+letter@{index\+\_\+for\+\_\+letter}}
+\index{index\+\_\+for\+\_\+letter@{index\+\_\+for\+\_\+letter}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{index\+\_\+for\+\_\+letter(char letter)}]{\setlength{\rightskip}{0pt plus 5cm}int Doc\+Parser\+::index\+\_\+for\+\_\+letter (
+\begin{DoxyParamCaption}
+\item[{char}]{letter}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a7addc81ac337c2688bb9e9d8197db2fc}
+
+
+Determine which \hyperlink{class_a_v_l_tree_index}{A\+V\+L\+Tree\+Index} or \hyperlink{class_hash_table_index}{Hash\+Table\+Index} should handle the appearance. Returns 0 if the term is a number, 1 for \textquotesingle{}a\textquotesingle{}, 2 for \textquotesingle{}b\textquotesingle{}, and so forth. 
+
+\hypertarget{class_doc_parser_ad7b5809e4efd3e2bae781c1cb491ab29}{}\index{Doc\+Parser@{Doc\+Parser}!init\+\_\+file\+\_\+page\+\_\+infos@{init\+\_\+file\+\_\+page\+\_\+infos}}
+\index{init\+\_\+file\+\_\+page\+\_\+infos@{init\+\_\+file\+\_\+page\+\_\+infos}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{init\+\_\+file\+\_\+page\+\_\+infos(xml\+\_\+node$<$$>$ $\ast$curr\+Node, bool read\+Text)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Parser\+::init\+\_\+file\+\_\+page\+\_\+infos (
+\begin{DoxyParamCaption}
+\item[{{\bf xml\+\_\+node}$<$$>$ $\ast$}]{curr\+Node, }
+\item[{bool}]{read\+Text}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_ad7b5809e4efd3e2bae781c1cb491ab29}
+
+
+Call read\+\_\+page for each page. 
+
+\hypertarget{class_doc_parser_ad30c49de12ed45eaf2594c4718789c3e}{}\index{Doc\+Parser@{Doc\+Parser}!is\+\_\+stop\+\_\+word@{is\+\_\+stop\+\_\+word}}
+\index{is\+\_\+stop\+\_\+word@{is\+\_\+stop\+\_\+word}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{is\+\_\+stop\+\_\+word(string term)}]{\setlength{\rightskip}{0pt plus 5cm}bool Doc\+Parser\+::is\+\_\+stop\+\_\+word (
+\begin{DoxyParamCaption}
+\item[{string}]{term}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_ad30c49de12ed45eaf2594c4718789c3e}
+
+
+Checks the stop\+Word\+Map; returns true if the passed string is in stop\+Words. 
+
+\hypertarget{class_doc_parser_a45860ee7fb0b956c4342cd4a815818de}{}\index{Doc\+Parser@{Doc\+Parser}!read\+\_\+file@{read\+\_\+file}}
+\index{read\+\_\+file@{read\+\_\+file}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{read\+\_\+file(string file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Parser\+::read\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{string}]{file\+Path}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a45860ee7fb0b956c4342cd4a815818de}
+
+
+Get to the right node (assuming it\textquotesingle{}s the same structure as Wiki\+Books.\+xml, then call init\+\_\+file\+\_\+page\+\_\+infos. 
+
+\hypertarget{class_doc_parser_a48cd3949baca573b9be0b4ba24b9c79d}{}\index{Doc\+Parser@{Doc\+Parser}!read\+\_\+page@{read\+\_\+page}}
+\index{read\+\_\+page@{read\+\_\+page}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{read\+\_\+page(xml\+\_\+node$<$$>$ $\ast$curr\+Node, bool read\+Text)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Parser\+::read\+\_\+page (
+\begin{DoxyParamCaption}
+\item[{{\bf xml\+\_\+node}$<$$>$ $\ast$}]{curr\+Node, }
+\item[{bool}]{read\+Text}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_a48cd3949baca573b9be0b4ba24b9c79d}
+
+
+Makes a new \hyperlink{class_page_info}{Page\+Info} object from a page. Will or will not fetch term appearances from the text after using it as a \hyperlink{class_page_info}{Page\+Info} constructor parameter. 
+
+\hypertarget{class_doc_parser_af28153ebf0ee2fe97c2942c04c915adc}{}\index{Doc\+Parser@{Doc\+Parser}!read\+\_\+text@{read\+\_\+text}}
+\index{read\+\_\+text@{read\+\_\+text}!Doc\+Parser@{Doc\+Parser}}
+\subsubsection[{read\+\_\+text(xml\+\_\+node$<$$>$ $\ast$curr\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}void Doc\+Parser\+::read\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{{\bf xml\+\_\+node}$<$$>$ $\ast$}]{curr\+Node}
+\end{DoxyParamCaption}
+)}\label{class_doc_parser_af28153ebf0ee2fe97c2942c04c915adc}
+
+
+Get all page appearances from the current page\textquotesingle{}s text. Pass this info to the inverted index. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{docparser_8h}{docparser.\+h}\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{docparser_8cpp}{docparser.\+cpp}\end{DoxyCompactItemize}

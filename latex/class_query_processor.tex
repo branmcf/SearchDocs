@@ -1,0 +1,146 @@
+\hypertarget{class_query_processor}{}\section{Query\+Processor Class Reference}
+\label{class_query_processor}\index{Query\+Processor@{Query\+Processor}}
+
+
+Holds a relevancy\+Map (unordered\+\_\+map\+\_\+map$<$int, double$>$) that stores the total T\+D/\+I\+D\+F values that a page\+I\+D has for the current query. Keywords A\+N\+D and O\+R will find the intersection and union of potential results, respectively. Control is passed to \hyperlink{class_index_interface}{Index\+Interface} to print the \hyperlink{class_page_info}{Page\+Info} for the best 15 (or less) results.  
+
+
+
+
+{\ttfamily \#include $<$queryprocessor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_query_processor_ac4bebae67b0c08004f26f55957428574}{$\sim$\+Query\+Processor} ()
+\item 
+\hyperlink{class_query_processor_ac26c0e04d7fd486654a855c7e53027dd}{Query\+Processor} (\hyperlink{class_index_interface}{Index\+Interface} \&the\+Index, bool multi)
+\item 
+void \hyperlink{class_query_processor_ae54c39816f93865605311fbee9d09d08}{answer\+\_\+query} (istringstream \&query, string full\+\_\+query, bool intersection)
+\begin{DoxyCompactList}\small\item\em Start writing to \char`\"{}results\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_ac2e8b45fe91cbcebf9ec32a50e019df6}{display\+\_\+only\+\_\+multi\+\_\+word} (string search\+\_\+string)
+\item 
+void \hyperlink{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}{display\+\_\+best\+\_\+fifteen\+\_\+results} ()
+\begin{DoxyCompactList}\small\item\em Display results in descending order of summed T\+D/\+I\+D\+F value. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_ae59525962d93a0087fee0afd689ce1e3}{initiate\+\_\+query} (string query)
+\begin{DoxyCompactList}\small\item\em Get input from the user. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_ae1f3fdd94b58ac3016ab04873145fec7}{init\+\_\+relev\+\_\+map} (\hyperlink{class_term}{Term} $\ast$term)
+\begin{DoxyCompactList}\small\item\em Fill \char`\"{}results\char`\"{} with an initial candidate set. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_a29d1767fe229ea175488976673463dcb}{intersection\+\_\+incr\+\_\+relev\+\_\+map} (\hyperlink{class_term}{Term} $\ast$term)
+\begin{DoxyCompactList}\small\item\em Explained in \hyperlink{queryprocessor_8cpp}{Query\+Processor.\+cpp}. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_aa00880b1308428b29cdc32741f82f4fc}{union\+\_\+incr\+\_\+relev\+\_\+map} (\hyperlink{class_term}{Term} $\ast$term)
+\begin{DoxyCompactList}\small\item\em Explained in \hyperlink{queryprocessor_8cpp}{Query\+Processor.\+cpp}. \end{DoxyCompactList}\item 
+void \hyperlink{class_query_processor_a75cf5bed3dc75eed5e24aac70535b9d7}{sort\+\_\+results} (bool multi\+\_\+word)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Holds a relevancy\+Map (unordered\+\_\+map\+\_\+map$<$int, double$>$) that stores the total T\+D/\+I\+D\+F values that a page\+I\+D has for the current query. Keywords A\+N\+D and O\+R will find the intersection and union of potential results, respectively. Control is passed to \hyperlink{class_index_interface}{Index\+Interface} to print the \hyperlink{class_page_info}{Page\+Info} for the best 15 (or less) results. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_query_processor_ac4bebae67b0c08004f26f55957428574}{}\index{Query\+Processor@{Query\+Processor}!````~Query\+Processor@{$\sim$\+Query\+Processor}}
+\index{````~Query\+Processor@{$\sim$\+Query\+Processor}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{$\sim$\+Query\+Processor()}]{\setlength{\rightskip}{0pt plus 5cm}Query\+Processor\+::$\sim$\+Query\+Processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ac4bebae67b0c08004f26f55957428574}
+\hypertarget{class_query_processor_ac26c0e04d7fd486654a855c7e53027dd}{}\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
+\index{Query\+Processor@{Query\+Processor}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{Query\+Processor(\+Index\+Interface \&the\+Index, bool multi)}]{\setlength{\rightskip}{0pt plus 5cm}Query\+Processor\+::\+Query\+Processor (
+\begin{DoxyParamCaption}
+\item[{{\bf Index\+Interface} \&}]{the\+Index, }
+\item[{bool}]{multi}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ac26c0e04d7fd486654a855c7e53027dd}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_query_processor_ae54c39816f93865605311fbee9d09d08}{}\index{Query\+Processor@{Query\+Processor}!answer\+\_\+query@{answer\+\_\+query}}
+\index{answer\+\_\+query@{answer\+\_\+query}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{answer\+\_\+query(istringstream \&query, string full\+\_\+query, bool intersection)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::answer\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{istringstream \&}]{query, }
+\item[{string}]{full\+\_\+query, }
+\item[{bool}]{intersection}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ae54c39816f93865605311fbee9d09d08}
+
+
+Start writing to \char`\"{}results\char`\"{}. 
+
+\hypertarget{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}{}\index{Query\+Processor@{Query\+Processor}!display\+\_\+best\+\_\+fifteen\+\_\+results@{display\+\_\+best\+\_\+fifteen\+\_\+results}}
+\index{display\+\_\+best\+\_\+fifteen\+\_\+results@{display\+\_\+best\+\_\+fifteen\+\_\+results}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{display\+\_\+best\+\_\+fifteen\+\_\+results()}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::display\+\_\+best\+\_\+fifteen\+\_\+results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_a3e93e0a00cd935ee71497623c8e6d4ad}
+
+
+Display results in descending order of summed T\+D/\+I\+D\+F value. 
+
+\hypertarget{class_query_processor_ac2e8b45fe91cbcebf9ec32a50e019df6}{}\index{Query\+Processor@{Query\+Processor}!display\+\_\+only\+\_\+multi\+\_\+word@{display\+\_\+only\+\_\+multi\+\_\+word}}
+\index{display\+\_\+only\+\_\+multi\+\_\+word@{display\+\_\+only\+\_\+multi\+\_\+word}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{display\+\_\+only\+\_\+multi\+\_\+word(string search\+\_\+string)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::display\+\_\+only\+\_\+multi\+\_\+word (
+\begin{DoxyParamCaption}
+\item[{string}]{search\+\_\+string}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ac2e8b45fe91cbcebf9ec32a50e019df6}
+\hypertarget{class_query_processor_ae1f3fdd94b58ac3016ab04873145fec7}{}\index{Query\+Processor@{Query\+Processor}!init\+\_\+relev\+\_\+map@{init\+\_\+relev\+\_\+map}}
+\index{init\+\_\+relev\+\_\+map@{init\+\_\+relev\+\_\+map}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{init\+\_\+relev\+\_\+map(\+Term $\ast$term)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::init\+\_\+relev\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{{\bf Term} $\ast$}]{term}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ae1f3fdd94b58ac3016ab04873145fec7}
+
+
+Fill \char`\"{}results\char`\"{} with an initial candidate set. 
+
+\hypertarget{class_query_processor_ae59525962d93a0087fee0afd689ce1e3}{}\index{Query\+Processor@{Query\+Processor}!initiate\+\_\+query@{initiate\+\_\+query}}
+\index{initiate\+\_\+query@{initiate\+\_\+query}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{initiate\+\_\+query(string query)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::initiate\+\_\+query (
+\begin{DoxyParamCaption}
+\item[{string}]{query}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_ae59525962d93a0087fee0afd689ce1e3}
+
+
+Get input from the user. 
+
+\hypertarget{class_query_processor_a29d1767fe229ea175488976673463dcb}{}\index{Query\+Processor@{Query\+Processor}!intersection\+\_\+incr\+\_\+relev\+\_\+map@{intersection\+\_\+incr\+\_\+relev\+\_\+map}}
+\index{intersection\+\_\+incr\+\_\+relev\+\_\+map@{intersection\+\_\+incr\+\_\+relev\+\_\+map}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{intersection\+\_\+incr\+\_\+relev\+\_\+map(\+Term $\ast$term)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::intersection\+\_\+incr\+\_\+relev\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{{\bf Term} $\ast$}]{term}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_a29d1767fe229ea175488976673463dcb}
+
+
+Explained in \hyperlink{queryprocessor_8cpp}{Query\+Processor.\+cpp}. 
+
+\hypertarget{class_query_processor_a75cf5bed3dc75eed5e24aac70535b9d7}{}\index{Query\+Processor@{Query\+Processor}!sort\+\_\+results@{sort\+\_\+results}}
+\index{sort\+\_\+results@{sort\+\_\+results}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{sort\+\_\+results(bool multi\+\_\+word)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::sort\+\_\+results (
+\begin{DoxyParamCaption}
+\item[{bool}]{multi\+\_\+word}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_a75cf5bed3dc75eed5e24aac70535b9d7}
+\hypertarget{class_query_processor_aa00880b1308428b29cdc32741f82f4fc}{}\index{Query\+Processor@{Query\+Processor}!union\+\_\+incr\+\_\+relev\+\_\+map@{union\+\_\+incr\+\_\+relev\+\_\+map}}
+\index{union\+\_\+incr\+\_\+relev\+\_\+map@{union\+\_\+incr\+\_\+relev\+\_\+map}!Query\+Processor@{Query\+Processor}}
+\subsubsection[{union\+\_\+incr\+\_\+relev\+\_\+map(\+Term $\ast$term)}]{\setlength{\rightskip}{0pt plus 5cm}void Query\+Processor\+::union\+\_\+incr\+\_\+relev\+\_\+map (
+\begin{DoxyParamCaption}
+\item[{{\bf Term} $\ast$}]{term}
+\end{DoxyParamCaption}
+)}\label{class_query_processor_aa00880b1308428b29cdc32741f82f4fc}
+
+
+Explained in \hyperlink{queryprocessor_8cpp}{Query\+Processor.\+cpp}. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{queryprocessor_8h}{queryprocessor.\+h}\item 
+/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/\hyperlink{queryprocessor_8cpp}{queryprocessor.\+cpp}\end{DoxyCompactItemize}

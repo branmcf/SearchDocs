@@ -1,0 +1,96 @@
+\hypertarget{mapping_8h}{}\section{/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/mapping.h File Reference}
+\label{mapping_8h}\index{/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/mapping.\+h@{/\+Users/brandonmcfarland/\+Desktop/searchdocs/\+Search\+Engine/\+Final\+Project/mapping.\+h}}
+{\ttfamily \#include $<$\+\_\+\+\_\+config$>$}\\*
+{\ttfamily \#include $<$\+\_\+\+\_\+hash\+\_\+table$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$\+\_\+\+\_\+debug$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class______map__hasher}{\+\_\+\+\_\+\+\_\+map\+\_\+hasher$<$ \+\_\+\+Key, \+\_\+\+Cp, \+\_\+\+Hash, bool $>$}
+\item 
+class \hyperlink{class______map__hasher_3_01___key_00_01___cp_00_01___hash_00_01false_01_4}{\+\_\+\+\_\+\+\_\+map\+\_\+hasher$<$ \+\_\+\+Key, \+\_\+\+Cp, \+\_\+\+Hash, false $>$}
+\item 
+class \hyperlink{class______map__equal}{\+\_\+\+\_\+\+\_\+map\+\_\+equal$<$ \+\_\+\+Key, \+\_\+\+Cp, \+\_\+\+Pred, bool $>$}
+\item 
+class \hyperlink{class______map__equal_3_01___key_00_01___cp_00_01___pred_00_01false_01_4}{\+\_\+\+\_\+\+\_\+map\+\_\+equal$<$ \+\_\+\+Key, \+\_\+\+Cp, \+\_\+\+Pred, false $>$}
+\item 
+class \hyperlink{class____hash__map__node__destructor}{\+\_\+\+\_\+hash\+\_\+map\+\_\+node\+\_\+destructor$<$ \+\_\+\+Alloc $>$}
+\item 
+struct \hyperlink{struct____hash__value__type}{\+\_\+\+\_\+hash\+\_\+value\+\_\+type$<$ \+\_\+\+Key, \+\_\+\+Tp $>$}
+\item 
+class \hyperlink{class____hash__map__iterator}{\+\_\+\+\_\+hash\+\_\+map\+\_\+iterator$<$ \+\_\+\+Hash\+Iterator $>$}
+\item 
+class \hyperlink{class____hash__map__const__iterator}{\+\_\+\+\_\+hash\+\_\+map\+\_\+const\+\_\+iterator$<$ \+\_\+\+Hash\+Iterator $>$}
+\item 
+class \hyperlink{class__map}{\+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$}
+\item 
+class \hyperlink{classunordered__multimap}{unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\\+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y void \hyperlink{mapping_8h_a5c4faebd0dc90b969d0e2f7e3d5a797c}{swap} (\hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, \hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y) \+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+\_\+x.\+swap(\+\_\+\+\_\+y)))
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\bool \hyperlink{mapping_8h_a79975c54ef299ba6882a770e50f04b58}{operator==} (const \hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\\+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y bool \hyperlink{mapping_8h_ae1bb335ed3e011737c02b9b513de32c4}{operator!=} (const \hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \hyperlink{class__map}{\+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\\+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y void \hyperlink{mapping_8h_a33472168ec730d9021bfd0f3686a1345}{swap} (\hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, \hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y) \+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+\_\+x.\+swap(\+\_\+\+\_\+y)))
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\bool \hyperlink{mapping_8h_ad1f466ed56d6bf5129e5a96013a79b92}{operator==} (const \hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)
+\item 
+{\footnotesize template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ }\\\+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y bool \hyperlink{mapping_8h_af47ce5b27e26b5dde7e2881c1e622af8}{operator!=} (const \hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \hyperlink{classunordered__multimap}{unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{mapping_8h_ae1bb335ed3e011737c02b9b513de32c4}{}\index{mapping.\+h@{mapping.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{operator"!=(const \+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ \+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{const {\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{mapping_8h_ae1bb335ed3e011737c02b9b513de32c4}
+\hypertarget{mapping_8h_af47ce5b27e26b5dde7e2881c1e622af8}{}\index{mapping.\+h@{mapping.\+h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{operator"!=(const unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ \+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{const {\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{mapping_8h_af47ce5b27e26b5dde7e2881c1e622af8}
+\hypertarget{mapping_8h_a79975c54ef299ba6882a770e50f04b58}{}\index{mapping.\+h@{mapping.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{operator==(const \+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const \+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{const {\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)}\label{mapping_8h_a79975c54ef299ba6882a770e50f04b58}
+\hypertarget{mapping_8h_ad1f466ed56d6bf5129e5a96013a79b92}{}\index{mapping.\+h@{mapping.\+h}!operator==@{operator==}}
+\index{operator==@{operator==}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{operator==(const unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, const unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{const {\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)}\label{mapping_8h_ad1f466ed56d6bf5129e5a96013a79b92}
+\hypertarget{mapping_8h_a5c4faebd0dc90b969d0e2f7e3d5a797c}{}\index{mapping.\+h@{mapping.\+h}!swap@{swap}}
+\index{swap@{swap}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{swap(\+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, \+\_\+map$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y) \+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+\_\+x.\+swap(\+\_\+\+\_\+y)))}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ \+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{{\bf \+\_\+map}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{mapping_8h_a5c4faebd0dc90b969d0e2f7e3d5a797c}
+\hypertarget{mapping_8h_a33472168ec730d9021bfd0f3686a1345}{}\index{mapping.\+h@{mapping.\+h}!swap@{swap}}
+\index{swap@{swap}!mapping.\+h@{mapping.\+h}}
+\subsubsection[{swap(unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+x, unordered\+\_\+multimap$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&\+\_\+\+\_\+y) \+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+N\+O\+E\+X\+C\+E\+P\+T\+\_\+(\+\_\+\+\_\+x.\+swap(\+\_\+\+\_\+y)))}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class \+\_\+\+Key , class \+\_\+\+Tp , class \+\_\+\+Hash , class \+\_\+\+Pred , class \+\_\+\+Alloc $>$ \+\_\+\+L\+I\+B\+C\+P\+P\+\_\+\+I\+N\+L\+I\+N\+E\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+x, }
+\item[{{\bf unordered\+\_\+multimap}$<$ \+\_\+\+Key, \+\_\+\+Tp, \+\_\+\+Hash, \+\_\+\+Pred, \+\_\+\+Alloc $>$ \&}]{\+\_\+\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{mapping_8h_a33472168ec730d9021bfd0f3686a1345}
